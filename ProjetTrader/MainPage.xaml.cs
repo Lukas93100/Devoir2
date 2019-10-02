@@ -23,7 +23,7 @@ namespace ProjetTrader
     /// </summary>
     public sealed partial class MainPage : Page
     {
-       
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -31,7 +31,7 @@ namespace ProjetTrader
         Dictionary<string, List<ActionAchetee>> dico;
 
         List<ActionReelle> lesActionsReelles;
-        
+
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -236,29 +236,33 @@ namespace ProjetTrader
             );
             #endregion
             lvTraders.ItemsSource = dico.Keys;
-            lvAchat.ItemsSource = lesActionsReelles;
+
         }
 
 
-      
-        
+
+
         private void LvTraders_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           
+
             if (lvTraders.SelectedItem != null)
             {
                 lvActions.ItemsSource = null;
                 lvActions.ItemsSource = dico[lvTraders.SelectedItem.ToString()];
             }
-            
-            
-    }
-
-        private void LvActions_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-       
-           
+            double montant = 0;
+            foreach (ActionAchetee a in dico[lvTraders.SelectedItem.ToString()])
+            {
+                montant += a.Quantite * a.PrixAchat;
+            }
+            txtMontantTot.Text = montant.ToString();
 
         }
+
+
+    }
 }
-}
+
+    
+
+

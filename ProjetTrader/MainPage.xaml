@@ -24,7 +24,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <ListView  Name="lvActions" HorizontalAlignment="Left" Height="297" Grid.Column="0" VerticalAlignment="Top" Width="574" Margin="375,332,0,0" SelectionChanged="LvActions_SelectionChanged">
+        <ListView  Name="lvActions" HorizontalAlignment="Left" Height="297" Grid.Column="0" VerticalAlignment="Top" Width="574" Margin="375,332,0,0">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -62,7 +62,7 @@
         <TextBox HorizontalAlignment="Left" Margin="897,848,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="219"/>
         <TextBlock HorizontalAlignment="Left" Margin="978,829,0,0" Text="Quantité" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Button Content="Acheter" Margin="897,880,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.533,0.451" Width="219"/>
-        <TextBlock Name="txtMontant" HorizontalAlignment="Left" Margin="522,773,0,0" Text="Montant Portefeuille" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Name="txtMontantTot" HorizontalAlignment="Left" Margin="522,773,0,0" Text="Montant Portefeuille" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="476,806,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="219"/>
 
     </Grid>
