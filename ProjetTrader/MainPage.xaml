@@ -6,9 +6,46 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
 
     <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="448,76,0,0" Text="Gestion Portefeuille" TextWrapping="Wrap" VerticalAlignment="Top" Height="96" Width="656" FontSize="70"/>
+        <TextBlock HorizontalAlignment="Left" Margin="133,279,0,0" Text="Liste Trader" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="141" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="448,279,0,0" Text="Liste des Actions" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="172" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="929,279,0,0" Text="Achat" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="141" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1270,279,0,0" Text="Vente" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="141" FontSize="20"/>
+        <ListView SelectionChanged="LvTrader_SelectionChanged" Name="lvTrader" HorizontalAlignment="Left" Height="293" Grid.Column="0" VerticalAlignment="Top" Width="305" Margin="-1,337,0,0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding NomCommercial}" Width="100"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ListView SelectionChanged="LvAction_SelectionChanged" Name="lvAction" HorizontalAlignment="Left" Height="297" Grid.Column="0" VerticalAlignment="Top" Width="557" Margin="340,332,0,0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding NomCommercial}" Width="100"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ListView SelectionChanged="LvAchat_SelectionChanged" Name="lvAchat" HorizontalAlignment="Left" Height="405" Grid.Column="0" VerticalAlignment="Top" Width="276" Margin="897,336,0,0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding NomCommercial}" Width="100"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <TextBlock HorizontalAlignment="Left" Margin="1220,368,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1220,465,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1220,572,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1220,676,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1220,788,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>
