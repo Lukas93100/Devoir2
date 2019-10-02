@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetTrader
 {
-    class ActionAchetee
+   public class ActionAchetee
     {
         public string CodeAction { get; set; }
         public string NomAction { get; set; }
