@@ -18,7 +18,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding NomCommercial}" Width="100"></TextBlock>
+                        <TextBlock Text="{Binding}" Width="100"></TextBlock>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -41,11 +41,22 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <TextBlock HorizontalAlignment="Left" Margin="1220,368,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1220,465,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1220,572,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1220,676,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1220,788,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1220,368,0,0" Text="Nom de l'action" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1220,465,0,0" Text="Valeur de l'action" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1220,572,0,0" Text="Prix Achat" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1220,676,0,0" Text="Quantité achetée" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1220,788,0,0" Text="Quantité Vendue" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="1220,418,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Margin="1220,506,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Margin="1220,616,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Margin="1220,724,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Margin="1220,832,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="219" IsEnabled="False"/>
+        <Button Content="Vendre" Margin="1251,908,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="897,788,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="219"/>
+        <TextBlock HorizontalAlignment="Left" Margin="975,770,0,0" Text="Prix Achat" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="897,848,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="219"/>
+        <TextBlock HorizontalAlignment="Left" Margin="978,829,0,0" Text="Quantité" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Acheter" Margin="897,880,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.533,0.451" Width="219"/>
 
     </Grid>
 </Page>
