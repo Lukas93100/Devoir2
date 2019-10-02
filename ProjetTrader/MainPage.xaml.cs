@@ -29,11 +29,15 @@ namespace ProjetTrader
             this.InitializeComponent();
         }
         Dictionary<string, List<ActionAchetee>> dico;
+
         List<ActionReelle> lesActionsReelles;
+        
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             dico = new Dictionary<string, List<ActionAchetee>>();
+            lesActionsReelles = new List<ActionReelle>();
+
             #region jeu d'essais pour le dico
             dico.Add
             ("Enzo", new List<ActionAchetee>()
@@ -231,12 +235,30 @@ namespace ProjetTrader
                 }
             );
             #endregion
-
+            lvTraders.ItemsSource = dico.Keys;
+            lvAchat.ItemsSource = lesActionsReelles;
         }
 
-        private void LvTrader_SelectionChanged(object sender, SelectionChangedEventArgs e)
+
+      
+        
+        private void LvTraders_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            lvTrader.ItemsSource = dico.Keys;
-        }
+           
+            if (lvTraders.SelectedItem != null)
+            {
+                lvActions.ItemsSource = null;
+                lvActions.ItemsSource = dico[lvTraders.SelectedItem.ToString()];
+            }
+            
+            
     }
+
+        private void LvActions_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+       
+           
+
+        }
+}
 }
